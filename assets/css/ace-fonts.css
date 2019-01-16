@@ -1,0 +1,34 @@
+/* included only when we don't want to use fonts from google server */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(../fonts/OpenSans-300.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(../fonts/OpenSans-400.woff) format('woff');
+}
+@font-face {
+    font: (NHaasGroteskTXPro-75Bd)NeueHaasGroteskBlack;
+    font-style:  normal;
+    font-weight: normal;
+    src: url(../fonts/(NHaasGroteskTXPro-75Bd)NeueHaasGroteskBlack.eot) format('eot'); 
+	}
+	
+@font-face {
+    font: (TradeGothic)Trade Gothic;
+    font-style:  normal;
+    font-weight: normal;
+    src: url(../fonts/(TradeGothic)Trade Gothic.eot) format('eot'); 
+	}
+	
+@font-face {
+    font: (ChaletComprime-CologneEighty)ChaletComprime-CologneEight;
+    font-style:  normal;
+    font-weight: normal;
+    src: url(../fonts/(ChaletComprime-CologneEighty)ChaletComprime-CologneEight.eot) format('eot'); 
+	}
+	

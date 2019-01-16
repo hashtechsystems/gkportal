@@ -1,0 +1,6 @@
+[31-Aug-2017 11:36:23 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/hashus/public_html/grasshopper_admin/index.php:1) in /home/hashus/public_html/grasshopper_admin/remove_assign.php on line 5
+[02-Nov-2018 13:10:41 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/hashus/public_html/gkpos/admin-new/download_product_treez_list.php on line 32
+[07-Jan-2019 12:46:57 UTC] PHP Warning:  include(dbConnect.php): failed to open stream: No such file or directory in /home/hashus/public_html/gkpos/admin-new/UpdateProduct_MJFreeWay.php on line 3
+[07-Jan-2019 12:46:57 UTC] PHP Warning:  include(): Failed opening 'dbConnect.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/hashus/public_html/gkpos/admin-new/UpdateProduct_MJFreeWay.php on line 3
+[09-Jan-2019 07:55:23 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/hashus/public_html/gkpos/admin-new/UpdateProduct_GreenBits.php on line 84
+[09-Jan-2019 12:37:49 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/hashus/public_html/gkpos/admin-new/UpdateProduct_GreenBits.php on line 57
