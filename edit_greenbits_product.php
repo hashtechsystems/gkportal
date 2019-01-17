@@ -47,14 +47,14 @@ if($_REQUEST['submit'])
 		if($_FILES['orignal_image']['name']!="")
 		{
 			$imageName="green_bits-".$_REQUEST['id'].".png";
-			move_uploaded_file($_FILES['orignal_image']['tmp_name'], "../admin/product_images/".$imageName);
+			move_uploaded_file($_FILES['orignal_image']['tmp_name'], "product_images/".$imageName);
 			mysql_query("UPDATE `tbl_greenbits_inventory` SET `product_orignal_image`='".$imageName."' WHERE id='".$_REQUEST['id']."'");
 		}
 		
 		if($_FILES['small_image']['name']!="")
 		{
 			$SmimageName="green_bits-small-".$_REQUEST['id'].".png";
-			move_uploaded_file($_FILES['small_image']['tmp_name'], "../admin/product_images/".$SmimageName);
+			move_uploaded_file($_FILES['small_image']['tmp_name'], "product_images/".$SmimageName);
 			mysql_query("UPDATE `tbl_greenbits_inventory` SET `product_small_image`='".$SmimageName."' WHERE id='".$_REQUEST['id']."'");
 		}
 		
@@ -233,7 +233,7 @@ function showfilename(img){
 </div>
 <div style="float:left;margin-left:10px">
 <?php
-if( $data['product_orignal_image']!=""){ ?><img src="../admin/product_images/<?php echo $data['product_orignal_image'];?>" height="100" /> <? } 
+if( $data['product_orignal_image']!=""){ ?><img src="product_images/<?php echo $data['product_orignal_image'];?>" height="100" /> <? } 
 ?>
 </div>
 </div>
@@ -249,7 +249,7 @@ if( $data['product_orignal_image']!=""){ ?><img src="../admin/product_images/<?p
 </div>
 <div style="float:left;margin-left:10px">
 <?php
-if( $data['product_small_image']!=""){ ?><img src="../admin/product_images/<?php echo $data['product_small_image'];?>" height="100" /> <? } 
+if( $data['product_small_image']!=""){ ?><img src="product_images/<?php echo $data['product_small_image'];?>" height="100" /> <? } 
 ?>
 </div>
 </div>

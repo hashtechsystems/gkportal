@@ -58,7 +58,7 @@ if($_REQUEST['btnSubmit'])
 			{
 				if($Error == 0){
 					$largeProductImg = "product_images/".$_SESSION['user_id']."_large_".trim($_FILES['largeImg']['name']);
-					move_uploaded_file($_FILES['largeImg']['tmp_name'],'../admin/'.$largeProductImg);
+					move_uploaded_file($_FILES['largeImg']['tmp_name'],$largeProductImg);
 				}
 			}
 			else
@@ -80,7 +80,7 @@ if($_REQUEST['btnSubmit'])
 			{
 				if($Error == 0){
 					$smallProductImg = "product_images/".$_SESSION['user_id']."_small_".trim($_FILES['smallImg']['name']);
-					move_uploaded_file($_FILES['smallImg']['tmp_name'],'../admin/'.$smallProductImg);
+					move_uploaded_file($_FILES['smallImg']['tmp_name'],$smallProductImg);
 				}
 			}
 			else

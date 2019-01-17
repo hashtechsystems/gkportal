@@ -38,7 +38,7 @@ if($_REQUEST['submit'])
 		{
 			$screenImg = "screen_ImgVid/".$_SESSION['user_id']."_ScreenImg_".trim($_FILES['screenImg']['name']);
 			//move_uploaded_file($_FILES['screenImg']['tmp_name'],$screenImg);
-			move_uploaded_file($_FILES['screenImg']['tmp_name'],"../admin/".$screenImg);
+			move_uploaded_file($_FILES['screenImg']['tmp_name'],$screenImg);
 			mysql_query("UPDATE `tbl_terminal` SET  `screenImage` = '".mysql_real_escape_string($screenImg)."' WHERE terminal_id = '".$terminal_id."'");
 		}
 		
@@ -46,7 +46,7 @@ if($_REQUEST['submit'])
 		{
 			$screenVid = "screen_ImgVid/".$_SESSION['user_id']."_ScreenVid_".trim($_FILES['screenVid']['name']);
 			//move_uploaded_file($_FILES['screenVid']['tmp_name'],$screenVid);
-			move_uploaded_file($_FILES['screenVid']['tmp_name'],"../admin/".$screenVid);
+			move_uploaded_file($_FILES['screenVid']['tmp_name'],$screenVid);
 			mysql_query("UPDATE `tbl_terminal` SET  `screenVideo` = '".mysql_real_escape_string($screenVid)."' WHERE terminal_id = '".$terminal_id."'");
 		}
 				
@@ -99,7 +99,7 @@ function showfilename(img){
                                 </div>
 								<div class="col-md-4">
 									<?php
-										if( $screenImg!=""){ ?><img src="../admin/<?php echo $screenImg;?>" height="200" /> <? } 
+										if( $screenImg!=""){ ?><img src="<?php echo $screenImg;?>" height="200" /> <? } 
 									?>
 								</div>
                               </div>
@@ -119,7 +119,7 @@ function showfilename(img){
 								<? if( $screenVid!=""){ ?>
 								<div class="col-md-4">
 									<video width="320" height="240" controls>
-										<source src="../admin/<?php echo $screenVid;?>" type="video/mp4">
+										<source src="<?php echo $screenVid;?>" type="video/mp4">
 									</video> 
 								</div>
 								<? } ?>

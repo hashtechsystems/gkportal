@@ -104,14 +104,14 @@ if($_REQUEST['btnSubmit'])
 		if(is_uploaded_file($_FILES['largeImg']['tmp_name']))
 		{
 			$largeProductImg = "product_images/".$_SESSION['user_id']."_large_".trim($_FILES['largeImg']['name']);
-			move_uploaded_file($_FILES['largeImg']['tmp_name'],'../admin/'.$largeProductImg);
+			move_uploaded_file($_FILES['largeImg']['tmp_name'],$largeProductImg);
 			$UPDATE_PRODUCT = mysql_query("UPDATE `tbl_products` SET  `product_img` = '".mysql_real_escape_string($largeProductImg)."' WHERE product_id = ".$pid);
 		}
 		
 		if(is_uploaded_file($_FILES['smallImg']['tmp_name']))
 		{
 			$smallProductImg = "product_images/".$_SESSION['user_id']."_small_".trim($_FILES['smallImg']['name']);
-			move_uploaded_file($_FILES['smallImg']['tmp_name'],'../admin/'.$smallProductImg);	
+			move_uploaded_file($_FILES['smallImg']['tmp_name'],$smallProductImg);	
 			$UPDATE_PRODUCT = mysql_query("UPDATE `tbl_products` SET  `product_small_img` = '".mysql_real_escape_string($smallProductImg)."' WHERE product_id = ".$pid);
 		}
 		
@@ -319,7 +319,7 @@ function showfilename(img){
 </div>
 <div style="float:left;margin-left:10px">
 <?php
-if( $largeProductImg_o!=""){ ?><img src="../admin/<?php echo $largeProductImg_o;?>" height="100" /> <? } 
+if( $largeProductImg_o!=""){ ?><img src="<?php echo $largeProductImg_o;?>" height="100" /> <? } 
 ?>
 </div>
 </div>
@@ -335,7 +335,7 @@ if( $largeProductImg_o!=""){ ?><img src="../admin/<?php echo $largeProductImg_o;
 </div>
 <div style="float:left;margin-left:10px">
 <?php
-if( $smallProductImg_o!=""){ ?><img src="../admin/<?php echo $smallProductImg_o;?>" height="100" /> <? } 
+if( $smallProductImg_o!=""){ ?><img src="<?php echo $smallProductImg_o;?>" height="100" /> <? } 
 ?>
 </div>
 </div>

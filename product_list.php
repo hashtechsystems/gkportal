@@ -166,7 +166,7 @@ function addInSearch(ele){
 	?>
     <tr style="border-bottom:solid 1px #ccc;">
 	  <td class="stat"> <?php echo $cnt; ?></td>
-	  <td class="stat"><? if( $data['product_img']!=""){ ?> <img src="../admin/<?php echo $data['product_img'];?>" height="70" /> <? } ?></td>      
+	  <td class="stat"><? if( $data['product_img']!=""){ ?> <img src="<?php echo $data['product_img'];?>" height="70" /> <? } ?></td>      
 	  <td class="stat"><?php echo $data['product_name']; ?></td> 
 <?php
 		$location = '';
